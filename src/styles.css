@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    /*  background-image: url("D:\Simplilearn\Angular Projects\QuizApplication\src\assets\quiz_image.jpg");*/
+    background-color:rgba(0, 0, 0, 0.848);
+      background-size: cover;
+      background-position: center;
+      height: fit-content;
+  }

@@ -1,0 +1,21 @@
+.center{
+    margin: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align:center;
+}
+.heading{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: initial;
+    color: cadetblue;
+    text-align: center;
+}
+.txtdesc{
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+.btnClass{
+    box-sizing: content-box;
+    text-decoration: azure;
+}

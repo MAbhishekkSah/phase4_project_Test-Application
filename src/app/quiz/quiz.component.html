@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <form #userForm="ngForm" (ngSubmit)="submit(userForm)">
+    <div class="d-flex justify-content-center row" *ngIf="currentIndex<=size()">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h4>MCQ Quiz</h4><span>({{currentIndex+1}} of {{size()+1}})</span></div>
+                </div>
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2">{{currentQuestion.question}}</h5>
+                    </div><div class="ans ml-2">
+<label class="radio"> <input type="radio" name="quizOptions" value="{{currentQuestion.choice1}}" ngModel>
+    <span>{{currentQuestion.choice1}}</span></label>    
+</div><div class="ans ml-2">
+<label class="radio"> <input type="radio" name="quizOptions"  value="{{currentQuestion.choice2}}" ngModel>
+    <span>{{currentQuestion.choice2}}</span></label>    
+</div><div class="ans ml-2">
+<label class="radio"> <input type="radio" name="quizOptions"  value="{{currentQuestion.choice3}}" ngModel> 
+    <span>{{currentQuestion.choice3}}</span></label>    
+</div><div class="ans ml-2">
+<label class="radio"> <input type="radio" name="quizOptions"  value="{{currentQuestion.choice4}}" ngModel> 
+    <span>{{currentQuestion.choice4}}</span></label>    
+</div></div>
+                <div *ngIf="currentIndex>0 && currentIndex<size()" class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                    <input class="btn btn-primary d-flex align-items-center btn-danger" type="button" value="Previous"
+                    (click)="onclickOfBackBtn(userForm)">
+                    <input class="btn btn-primary border-success align-items-center btn-success" type="submit" value="Next">
+                </div>
+                <div *ngIf="currentIndex==0" class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                    <input class="btn btn-primary border-success align-items-center btn-success" type="submit" value="Next">
+                </div>
+                <div *ngIf="currentIndex==size()" class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                    <input class="btn btn-primary d-flex align-items-center btn-danger" type="button" value="Previous">
+                    <input class="btn btn-primary border-success align-items-center btn-success" type="submit" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+<div *ngIf="currentIndex>size()" class="container mt-5">
+    <p><span style="text-align:left; color: #eee; font-size: 40px;">Your score is {{marks}} out of {{size()+1}} !</span></p>
+    <button class="btn btn-success" (click)="pageReload()"><span style="font-size: large;">Attempt Again !</span></button>
+</div>
