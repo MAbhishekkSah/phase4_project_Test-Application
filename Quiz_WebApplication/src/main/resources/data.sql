@@ -1,0 +1,5 @@
+insert into quiz (id,question,choice1,choice2,choice3,choice4,answer) values (1,'What is the Capital of Sikkim?','Ranchi','Gangtok','KathMandu','Guwhati','Gangtok');
+insert into quiz (id,question,choice1,choice2,choice3,choice4,answer) values (2,'What is the annotation used for marking a class as Table?','@Service','@GetMapping','@Entity','@Table','@Entity');
+insert into quiz (id,question,choice1,choice2,choice3,choice4,answer) values (3,'What is the annotation used for making a GET connection?','@GetMapping','@RestController','@GET','@POST','@GetMapping');
+insert into quiz (id,question,choice1,choice2,choice3,choice4,answer) values (4,'Which Country is hosting G-20 summit in 2023?','USA','France','Philliphines','India','India');
+insert into quiz (id,question,choice1,choice2,choice3,choice4,answer) values (5,'Which of the following organisations does not consists of Russia?','G-20','G-7','BRICS','UNSC','G-7');
